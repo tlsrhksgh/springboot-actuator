@@ -1,10 +1,27 @@
 # shutdown 기능은 기본적으로 false
 management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
   endpoint:
     shutdown:
       enabled: true
-# 전체 endpoint를 웹 상에 노출시켜 주는 설정
+    health:
+      show-components: always
+  #      show-details: always
+
+  # 전체 endpoint를 웹 상에 노출시켜 주는 설정
   endpoints:
     web:
       exposure:
         include: "*"
+
+
+info:
+  app:
+    name: hello-actuator
+    company: yh
