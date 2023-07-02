@@ -1,0 +1,10 @@
+# shutdown 기능은 기본적으로 false
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+# 전체 endpoint를 웹 상에 노출시켜 주는 설정
+  endpoints:
+    web:
+      exposure:
+        include: "*"
